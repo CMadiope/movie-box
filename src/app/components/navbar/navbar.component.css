@@ -1,0 +1,9 @@
+.navModal{
+  transition: 0.9s ease-in-out;
+  display: block;
+}
+
+.userModal{
+  transition: 0.9s ease-in-out;
+  display: block;
+}

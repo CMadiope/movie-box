@@ -1,0 +1,59 @@
+<header id="header">
+  <nav
+    class="w-full bg-[#0e1e32] py-4 px-6 flex justify-between items-center relative"
+    appClickedOutside
+    (clickOutside)="clickedOutside()"
+  >
+    <div class="flex items-center gap-5 text-xl">
+      <div
+        class="cursor-pointer hover:bg-gray-800 px-2 py-px"
+        (click)="showNavModal()"
+      >
+        <fa-icon [icon]="menu"></fa-icon>
+      </div>
+      <a routerLink="/" class="font-semibold"> MovieBox </a>
+    </div>
+    <div class="flex items-center gap-5">
+      <div>
+        <fa-icon [icon]="bell"></fa-icon>
+      </div>
+      <div
+        class="cursor-pointer hover:bg-gray-800 px-2 py-px"
+        (click)="openModal($event)"
+      >
+        <fa-icon [icon]="user"></fa-icon>
+      </div>
+    </div>
+
+    <!-- NavModal -->
+    <div
+      class="fixed top-16 hidden left-4 border border-[#0e1e32] z-10 bg-[#060e17] px-8 py-12 text-left"
+      [class.navModal]="navModal"
+    >
+      <ul class="text-gray-400 text-sm flex flex-col gap-3">
+        <li (click)="showNavModal()"><a routerLink="#">Movies</a></li>
+        <li (click)="showNavModal()"><a routerLink="#">TV Shows</a></li>
+        <li (click)="showNavModal()"><a routerLink="#">Trending</a></li>
+      </ul>
+    </div>
+
+    <!-- userModal -->
+    <!-- <div
+    class="max-w-[410px] hidden left-2 right-0 sm:left-[15%] md:left-[30%] lg:left-[40%] absolute top-[40vh] rounded-xl border-2 border-[#0e1e32] mx-6"
+    [class.userModal]="userModal"
+  >
+    <div class="bg-[#0b1726] w-full px-4 py-4">
+      <div class="flex justify-end pb-2">
+        <p
+          class="text-xs bg-gray-600 rounded-full py-2 px-3 cursor-pointer"
+          (click)="showUserModal()"
+        >
+          X
+        </p>
+      </div>
+      <h1 class="text-xl text-center font-semibold">Sign in to your account</h1>
+
+    </div>
+  </div> -->
+  </nav>
+</header>
